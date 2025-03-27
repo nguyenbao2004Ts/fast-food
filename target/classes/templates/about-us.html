@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ulatraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{default/layout}">
+<head>
+    <title>About Us - American Food</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>ABOUT US</h2>
+        <p>Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+        <div class="video">
+            <img th:src="@{/default/images/PlaceYourImageHereDo_7.png}" alt="Sandwich Video">
+        </div>
+        <div class="text-content">
+            <h3>Let food be thy medicine, medicine be thy food.</h3>
+            <p>Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+            <a th:href="@{/service}" class="btn">READ MORE</a>
+        </div>
+    </section>
+</div>
+</body>
+</html>

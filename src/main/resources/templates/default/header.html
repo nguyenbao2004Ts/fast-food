@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!-- Header fragment -->
+<header th:fragment="header">
+    <div class="header-top">
+        <nav>
+            <!-- Khối search-container -->
+            <div class="search-container">
+                <div class="search">
+                    <!-- Input ô tìm kiếm -->
+                    <input type="text" placeholder="Search here">
+                    <!-- Nút search -->
+                    <button class="search-btn">
+                        <!-- Đảm bảo đường dẫn ảnh đúng -->
+                        <img th:src="@{/default/images/Shape_51.png}" alt="Search" class="search-icon">
+                    </button>
+                </div>
+            </div>
+
+            <!-- Logo công ty -->
+            <div class="logo">
+                <img th:src="@{/default/images/PlaceYourLogoHereDou_0.png}" alt="Company Logo">
+            </div>
+
+            <!-- Link đăng ký/đăng nhập -->
+            <div class="auth-links">
+                <a th:href="@{/login}">Login</a>
+                <img th:src="@{/default/images/Shape_55.png}" alt="head" class="icon-head">
+                <img th:src="@{/default/images/Shape_52.png}" alt="Shopping Cart" class="icon-cart">
+            </div>
+        </nav>
+    </div>
+
+    <div class="header-bottom">
+        <div class="nav-menu">
+            <ul>
+                <li><a th:href="@{/american-food}">HOME</a></li>
+                <li><a th:href="@{/about-us}">ABOUT US</a></li>
+                <li><a th:href="@{/service}">SERVICE</a></li>
+                <li><a th:href="@{/pricing}">PRICING</a></li>
+                <li><a th:href="@{/blog}">BLOG</a></li>
+                <li><a th:href="@{/contact}">CONTACT</a></li>
+                <li sec:authorize="hasRole('ADMIN')">
+                    <a th:href="@{/foods/list-food}">ADD FOOD</a>
+                </li>
+                <li sec:authorize="hasRole('ADMIN')">
+                    <a th:href="@{/customer/list-customer}">ADD CUS</a>
+                </li>
+                <li sec:authorize="hasRole('ADMIN')">
+                    <a th:href="@{/user/list}">ADD TK</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</header>
+</body>
+</html>

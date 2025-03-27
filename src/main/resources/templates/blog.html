@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ulatraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{default/layout}">
+<head>
+    <title>Blog - American Food</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <h2>OUR BLOG</h2>
+        <p class="blog-subtitle">Discover the latest food trends and recipes</p>
+
+        <div class="posts">
+            <div class="post">
+                <img th:src="@{/default/images/PlaceYourImageHereDo.png}" alt="Hotdog" class="blog-image">
+                <div class="post-content">
+                    <h3>Eat food. Not too much, mostly plants.</h3>
+                    <p class="post-excerpt">Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                    <a th:href="@{/blog/post1}" class="btn">READ MORE</a>
+                </div>
+            </div>
+
+            <div class="post">
+                <img th:src="@{/default/images/PlaceYourImageHereDo_0.png}" alt="Burger" class="blog-image">
+                <div class="post-content">
+                    <h3>Healthy Eating Habits</h3>
+                    <p class="post-excerpt">Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                    <a th:href="@{/blog/post2}" class="btn">READ MORE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>

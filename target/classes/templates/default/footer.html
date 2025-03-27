@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!-- Footer fragment -->
+<footer th:fragment="footer">
+    <div class="footer-content">
+        <p>AMERICAN FOOD - The Best Taste Food</p>
+        <p>yourwebsite.com</p>
+        <div class="social-icons">
+            <a href="#"><img th:src="@{/default/images/Facebook.png}" alt="Facebook"></a>
+            <a href="#"><img th:src="@{/default/images/Twitter.png}" alt="Twitter"></a>
+            <a href="#"><img th:src="@{/default/images/Instagram.png}" alt="Instagram"></a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

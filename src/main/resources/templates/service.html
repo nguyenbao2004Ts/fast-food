@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ulatraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{default/layout}">
+<head>
+    <title>Our Services - American Food</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <!-- Service Section -->
+    <section id="service" class="service">
+        <h2>OUR SERVICES</h2>
+        <p class="service-subtitle">Discover our delicious offerings</p>
+        <div class="menu">
+            <div class="item">
+                <h3>Peanut Butter</h3>
+                <p class="price">$45</p>
+                <p class="description">Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                <img th:src="@{/default/images/PlaceYourImageHereDo_3.png}" alt="Peanut Butter" class="service-image">
+                <a th:href="@{/order?item=peanut-butter}" class="btn">BUY NOW</a>
+            </div>
+            <div class="item">
+                <h3>Pumpkin Pie</h3>
+                <p class="price">$35</p>
+                <p class="description">Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                <img th:src="@{/default/images/PlaceYourImageHereDo_4.png}" alt="Pumpkin Pie" class="service-image">
+                <a th:href="@{/order?item=pumpkin-pie}" class="btn">BUY NOW</a>
+            </div>
+            <div class="item">
+                <h3>Jambalaya</h3>
+                <p class="price">$50</p>
+                <p class="description">Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                <img th:src="@{/default/images/PlaceYourImageHereDo_5.png}" alt="Jambalaya" class="service-image">
+                <a th:href="@{/order?item=jambalaya}" class="btn">BUY NOW</a>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>

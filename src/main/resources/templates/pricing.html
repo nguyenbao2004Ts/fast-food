@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ulatraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{default/layout}">
+<head>
+    <title>Pricing - American Food</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <h2>OUR PRICING PLANS</h2>
+        <p class="pricing-subtitle">Choose the perfect plan for your taste buds</p>
+
+        <div class="plans">
+            <div class="plan">
+                <div class="plan-header">
+                    <h3>Basic</h3>
+                    <div class="price">$35</div>
+                </div>
+                <div class="plan-body">
+                    <p><i class="fas fa-check"></i> 6 Pcs Chicken</p>
+                    <p><i class="fas fa-check"></i> 3 Pcs Beef Chicken</p>
+                    <p><i class="fas fa-check"></i> 2 Pcs Burger</p>
+                </div>
+                <div class="plan-footer">
+                    <a th:href="@{/order?plan=basic}" class="btn">BUY NOW</a>
+                </div>
+            </div>
+
+            <div class="plan hot">
+                <div class="plan-header">
+                    <h3>Standard</h3>
+                    <div class="price">$50</div>
+                </div>
+                <div class="plan-body">
+                    <p><i class="fas fa-check"></i> 6 Pcs Chicken</p>
+                    <p><i class="fas fa-check"></i> 3 Pcs Beef Chicken</p>
+                    <p><i class="fas fa-check"></i> 2 Pcs Burger</p>
+                </div>
+                <div class="plan-footer">
+                    <a th:href="@{/order?plan=standard}" class="btn">BUY NOW</a>
+                </div>
+            </div>
+
+            <div class="plan">
+                <div class="plan-header">
+                    <h3>Premium</h3>
+                    <div class="price">$45</div>
+                </div>
+                <div class="plan-body">
+                    <p><i class="fas fa-check"></i> 6 Pcs Chicken</p>
+                    <p><i class="fas fa-check"></i> 3 Pcs Beef Chicken</p>
+                    <p><i class="fas fa-check"></i> 2 Pcs Burger</p>
+                </div>
+                <div class="plan-footer">
+                    <a th:href="@{/order?plan=premium}" class="btn">BUY NOW</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>
